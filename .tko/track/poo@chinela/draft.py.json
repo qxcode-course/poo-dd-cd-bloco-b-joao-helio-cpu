@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-06_19-49-33",
+            "content": "@@ -1,525 +0,0 @@\n-class Chinela:%0A    def __init__(self):%0A        self.__tamanho = 0%0A%0A    def getTamanho(self):%0A        return self.tamanho%0A    def setTamanho(self, valor:int):%0A        if self.__tamanho %3C 20 and  self.__tamanho %3E50:%0A            return self.__tamanho%0A        else:%0A            print (%22errado%22)%0A%0Achinela = Chinela()%0A%0Awhile chinela.getTamanho() == 0: %0A    print(%22Digite seu tamanho de chinela%22)%0A    tamanho = int(input()) %0A    chinela.setTamanho(tamanho) %0A%0Aprint(%22Parabens, voc%C3%AA comprou uma chinela tamanho%22, chinela.getTamanho())\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-06_20-03-55",
+            "content": "@@ -113,22 +113,16 @@\n .tamanho\n- %0A    \n %0A    def\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-10-07_13-16-09",
+            "content": "@@ -94,23 +94,23 @@\n         \n-print (\n+return \n self.tam\n@@ -113,17 +113,16 @@\n .tamanho\n-)\n  %0A    %0A \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-07_13-16-37",
+            "content": "@@ -102,26 +102,24 @@\n print (self.\n-__\n tamanho) %0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-07_13-16-53",
+            "content": "@@ -90,35 +90,8 @@\n f):%0A\n-        self.__tamanho = 0%0A\n     \n@@ -294,17 +294,16 @@\n rado%22)%0A%0A\n-%0A\n chinela \n@@ -314,16 +314,17 @@\n inela()%0A\n+%0A\n while ch\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-07_13-20-01",
+            "content": "@@ -202,29 +202,47 @@\n  if \n-valor %3C 20 and  valor\n+self.__tamanho %3C 20 and  self.__tamanho\n  %3E50\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-07_13-20-55",
+            "content": "@@ -98,15 +98,42 @@\n     \n-return \n+self.__tamanho = 0%0A        print (\n self\n@@ -142,16 +142,17 @@\n _tamanho\n+)\n  %0A    %0A \n@@ -208,36 +208,25 @@\n lor \n-%25\n+%3C\n  2\n- == \n 0 and \n-20 %3C=\n  valor \n-%3C= \n+%3E\n 50:%0A\n@@ -229,32 +229,39 @@\n 50:%0A            \n+return \n self.__tamanho =\n@@ -262,35 +262,8 @@\n anho\n- = valor%0A            return\n %0A   \n@@ -308,24 +308,8 @@\n )%0A%0A%0A\n-def main():%0A    \n chin\n@@ -324,21 +324,16 @@\n inela()%0A\n-%0A    \n while ch\n@@ -362,35 +362,16 @@\n 0: %0A\n-%0A        tamanho = int(inpu\n+    prin\n t(%22D\n@@ -404,22 +404,40 @@\n la%22)\n-) %0A\n %0A    \n- \n+tamanho = int(input()) %0A\n    \n-if\n  chi\n@@ -464,205 +464,80 @@\n nho)\n-:%0A            print(f%22Tamanho %7Bchinela.getTamanho%7D registrado com sucesso!%22)%0A            break%0A%0A        else: %0A            print(%22Valor inv%C3%A1lido! O tamanho deve ser PAR e estar entre 20 e 50.%22)%0A%0Amain\n+ %0A%0Aprint(%22Parabens, voc%C3%AA comprou uma chinela tamanho%22, chinela.getTamanho\n ()\n+)\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-07_13-34-54",
+            "content": "@@ -441,17 +441,16 @@\n  chinela\n- \n %22)) %0A%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-07_13-35-26",
+            "content": "@@ -265,37 +265,8 @@\n turn\n- self.__tamanho%0A             \n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-07_13-38-06",
+            "content": "@@ -539,16 +539,17 @@\n int(\n+f\n %22Tamanho\n %22, c\n@@ -548,11 +548,10 @@\n anho\n-%22,\n  \n+%7B\n chin\n@@ -568,11 +568,10 @@\n anho\n-, %22\n+%7D \n regi\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-10-07_13-39-28",
+            "content": "@@ -554,19 +554,20 @@\n chinela.\n-__t\n+getT\n amanho, \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-10-07_13-40-08",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho \n    \n    def setTamanho(self, valor:int):\n        if valor % 2 == 0 and 20 <= valor <= 50:\n            self.__tamanho = valor\n            return self.__tamanho\n             \n        else:\n            print (\"errado\")\n\n\ndef main():\n    chinela = Chinela()\n\n    while chinela.getTamanho() == 0: \n\n        tamanho = int(input(\"Digite seu tamanho de chinela \")) \n\n        if chinela.setTamanho(tamanho):\n            print(\"Tamanho\", chinela.__tamanho, \"registrado com sucesso!\")\n            break\n\n        else: \n            print(\"Valor inv\u00e1lido! O tamanho deve ser PAR e estar entre 20 e 50.\")\n\nmain()",
+            "lines": "31"
+        }
+    ]
+}
