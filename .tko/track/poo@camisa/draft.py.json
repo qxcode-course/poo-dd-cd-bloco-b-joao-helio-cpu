@@ -27,7 +27,12 @@
         },
         {
             "label": "2025-10-07_19-58-44",
-            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getTamanho(self) :\n        return self.__tamanho\n        \n    def setTamanho(self, valor:str):\n        if valor == \"PP\":\n            self.__tamanho = valor\n            return self.__tamanho\n        \n        else:\n            print(\"Errado!\")\n        \n    \ndef main():\n    blusa = Camisa()\n\n    while blusa.getTamanho() == \"\":\n        tam = str(input(\"Digite o tamanho da blusa: \"))\n\n        if blusa.setTamanho(tam):\n            print(f\"Sua blusa \u00e9 tamanho {blusa.getTamanho()}!\")\n            break\n        else:\n            print (\"Op\u00e7\u00e3o invalida! As disponiveis s\u00e3o: PP, P, M e G, GG e XG\")\n\nmain()\n",
+            "content": "@@ -196,90 +196,8 @@\n %22PP%22\n- or valor == %22P%22 or valor == %22M%22 or valor == %22G%22 or valor == %22GG%22 or valor == %22XG%22\n :%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-07_18-24-40",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getTamanho(self) :\n        return self.__tamanho\n        \n    def setTamanho(self, valor:str):\n        if valor == \"PP\" or valor == \"P\" or valor == \"M\" or valor == \"G\" or valor == \"GG\" or valor == \"XG\":\n            self.__tamanho = valor\n            return self.__tamanho\n        \n        else:\n            print(\"Errado!\")\n        \n    \ndef main():\n    blusa = Camisa()\n\n    while blusa.getTamanho() == \"\":\n        tam = str(input(\"Digite o tamanho da blusa: \"))\n\n        if blusa.setTamanho(tam):\n            print(f\"Sua blusa \u00e9 tamanho {blusa.getTamanho()}!\")\n            break\n        else:\n            print (\"Op\u00e7\u00e3o invalida! As disponiveis s\u00e3o: PP, P, M e G, GG e XG\")\n\nmain()\n",
             "lines": "29"
         }
     ]

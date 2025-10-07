@@ -11,8 +11,8 @@ sources:
   cache_timestamp: '2025-10-07 18:44:26'
   filters: null
 expanded:
-- poo@campanha-principal
-- poo@bloco_b-modificadores-de-acesso
+- poo@local_task_cluster
+- '@poo@local_task_cluster_sem_quest'
 tasks: {}
 flags:
   quests: 0
@@ -21,4 +21,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@chinela
+selected: poo@camisa

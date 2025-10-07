@@ -50,3 +50,11 @@
 2025-10-07 19:51:09, EXEC, v:1, k:poo@camisa, mode:FREE
 2025-10-07 19:58:42, MOVE, v:1, k:poo@camisa, mode:PICK
 2025-10-07 19:58:44, EXEC, v:1, k:poo@camisa, mode:FREE, size:29
+2025-10-07 18:24:39, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-07 18:24:40, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:29
+2025-10-07 18:24:42, EXEC, v:1, k:poo@camisa, mode:FREE
+2025-10-07 18:26:41, MOVE, v:1, k:poo@camisa, mode:BACK
+2025-10-07 18:27:12, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-07 18:27:14, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-07 18:27:16, EXEC, v:1, k:poo@camisa, mode:FREE
+2025-10-07 18:27:21, MOVE, v:1, k:poo@camisa, mode:BACK
