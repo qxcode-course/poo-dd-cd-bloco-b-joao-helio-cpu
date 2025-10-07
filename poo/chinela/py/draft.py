@@ -27,5 +27,5 @@ def main():
 
         else: 
             print("Valor inválido! O tamanho deve ser PAR e estar entre 20 e 50.")
-
+            break
 main()
