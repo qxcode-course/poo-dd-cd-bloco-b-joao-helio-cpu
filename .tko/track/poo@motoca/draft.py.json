@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-20_15-36-57",
+            "content": "@@ -1,566 +0,0 @@\n-class Pessoa:%0A    def __init__(self, nome: str):%0A        self.nome = nome%0A%0A    def __str__(self):%0A        return self.nome%0A%0A%0Aclass Moto:%0A    def __init__(self):%0A        self.pessoa: Pessoa %7C None = None%0A%0A    def inserir(self, pessoa: Pessoa):%0A        if self.pessoa != None:%0A            print(%22fail: moto ja esta ocupada%22)%0A            return%0A        self.pessoa = pessoa%0A%0A    def remover(self) -%3E Pessoa %7C None:%0A        aux = self.pessoa%0A        self.pessoa = None%0A        return aux%0A%0A%0Amoto = Moto()%0Afulano = Pessoa(%22Fulano%22)%0Amoto.inserir(fulano)%0Aprint(moto.pessoa)%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-20_16-09-45",
+            "content": "@@ -536,25 +536,14 @@\n rir(\n-Pessoa(%22Cic\n+fu\n lano\n-%22)\n )%0Apr\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-20_16-11-11",
+            "content": "@@ -493,16 +493,42 @@\n  Moto()%0A\n+fulano = Pessoa(%22Fulano%22)%0A\n moto.ins\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-20_16-11-58",
+            "content": "@@ -458,16 +458,35 @@\n  = None%0A\n+        return aux%0A\n %0A%0Amoto =\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-20_16-14-47",
+            "content": "@@ -462,27 +462,8 @@\n one%0A\n-        return aux%0A\n %0A%0Amo\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-20_16-14-59",
+            "content": "@@ -338,13 +338,8 @@\n turn\n- True\n %0A   \n@@ -493,8 +493,59 @@\n  Moto()%0A\n+moto.inserir(Pessoa(%22Ciclano%22))%0Aprint(moto.pessoa)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-20_16-17-11",
+            "content": "@@ -502,51 +502,4 @@\n o()%0A\n-moto.inserir(Pessoa(%22ana%22))%0Aprint(moto.pessoa)%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-20_16-17-25",
+            "content": "@@ -372,29 +372,8 @@\n ssoa\n-%0A        return False\n %0A%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-10-20_16-18-02",
+            "content": "@@ -130,17 +130,16 @@\n s Moto:%0A\n-%0A\n     def \n@@ -291,31 +291,34 @@\n nt(%22\n-J%C3%A1 existe gente na moto\n+fail: moto ja esta ocupada\n %22)%0A \n@@ -340,17 +340,16 @@\n rn True%0A\n-%0A\n         \n@@ -544,12 +544,11 @@\n oa(%22\n-joao\n+ana\n %22))%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-20_16-19-36",
+            "content": "@@ -507,396 +507,23 @@\n ux%0A%0A\n-    def __str__(self):%0A        return self.pessoa%0A%0A%0Adef main():%0A    moto = Moto()%0A    while True:%0A        line = input()%0A        print(%22$%22 + line)%0A        args = line.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(moto)%0A        elif args%5B0%5D == %22enter%22:%0A            nome = args%5B1%5D%0A            pessoa = Pessoa(nome)%0A            \n+%0Amoto = Moto()%0A\n moto\n@@ -535,282 +535,39 @@\n rir(\n-p\n+P\n essoa\n-)%0A        elif args%5B0%5D == %22remover%22:%0A            pessoa = moto.remover()%0A            if pessoa == None:%0A                print(%22Nigu%C3%A9m na moto%22)%0A            else:%0A                print(f%22%7Bpessoa%7D saiu da moto%22)%0A%0A        else:%0A            print(%22Comando inv%C3%A1lido%22)%0A%0A%0Amain(\n+(%22joao%22))%0Aprint(moto.pessoa\n )%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-20_16-31-59",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\n\nclass Moto:\n\n    def __init__(self):\n        self.pessoa: Pessoa | None = None\n\n    def inserir(self, pessoa: Pessoa):\n        if self.pessoa != None:\n            print(\"J\u00e1 existe gente na moto\")\n            return True\n\n        self.pessoa = pessoa\n        return False\n\n    def remover(self) -> Pessoa | None:\n        aux = self.pessoa\n        self.pessoa = None\n        return aux\n\n    def __str__(self):\n        return self.pessoa\n\n\ndef main():\n    moto = Moto()\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(moto)\n        elif args[0] == \"enter\":\n            nome = args[1]\n            pessoa = Pessoa(nome)\n            moto.inserir(pessoa)\n        elif args[0] == \"remover\":\n            pessoa = moto.remover()\n            if pessoa == None:\n                print(\"Nigu\u00e9m na moto\")\n            else:\n                print(f\"{pessoa} saiu da moto\")\n\n        else:\n            print(\"Comando inv\u00e1lido\")\n\n\nmain()\n",
+            "lines": "57"
+        }
+    ]
+}

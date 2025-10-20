@@ -8,19 +8,21 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: C:\Users\João Hélio\Desktop\Clone POO Bloco B\poo-dd-cd-bloco-b-joao-helio-cpu\.tko\cache\poo.md
-  cache_timestamp: '2025-10-14 21:05:57'
+  cache_timestamp: '2025-10-20 15:34:41'
   filters: null
 expanded:
 - poo@campanha-principal
-- poo@bloco_b-modificadores-de-acesso
+- poo@bloco_b-agregação-simples
 tasks:
   poo@chinela: '{rate:80, human:fiz_junto_com_meu_amigo, alone:8}'
-  poo@relogio: '{rate:100}'
+  poo@camisa: '{rate:80, guide:aulas_do_professor, alone:9, study:60}'
+  poo@roupa: '{rate:100, human:Meu_amigo, alone:7}'
+  poo@relogio: '{rate:100, human:meu_amigo, alone:8}'
 flags:
   quests: 0
   tracks: 0
   tasks: 0
-  graph: 0
+  graph: 1
   xray: 0
 lang: py
-selected: poo@chinela
+selected: poo@motoca
