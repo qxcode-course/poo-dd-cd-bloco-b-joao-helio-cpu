@@ -1,57 +1,93 @@
 class Pessoa:
-    def __init__(self, nome: str):
-        self.nome = nome
+    def __init__(self, nome: str, idade: int):
+        self.__nome = nome
+        self.__idade = idade
 
     def __str__(self):
-        return self.nome
+        return f"({self.__nome}:{self.__idade})"
+
+    def get_nome(self):
+        return self.__nome
+
+    def get_idade(self):
+        return self.__idade
 
 
 class Moto:
-
-    def __init__(self):
+    def __init__(self, potencia: int = 1):
+        self.potencia = potencia
+        self.tempo = 0
         self.pessoa: Pessoa | None = None
 
-    def inserir(self, pessoa: Pessoa):
-        if self.pessoa != None:
-            print("Já existe gente na moto")
-            return True
-
-        self.pessoa = pessoa
-        return False
-
-    def remover(self) -> Pessoa | None:
-        aux = self.pessoa
-        self.pessoa = None
-        return aux
-
     def __str__(self):
-        return self.pessoa
+        reserva = f"power:{self.potencia}, time:{self.tempo}, person:"
+        if self.pessoa == None:
+            reserva += ("(empty)")
+        else:
+            reserva += f"({self.pessoa.get_nome()}:{self.pessoa.get_idade()})"
+        return (reserva)
+
+    def inserir(self, pessoa: Pessoa):
+        if self.pessoa is not None:
+            print("fail: busy motorcycle")
+            return
+        self.pessoa = pessoa
+
+    def remover(self):
+        if self.pessoa is None:
+            print("fail: empty motorcycle")
+            return
+        print(f"{self.pessoa.get_nome()}:{self.pessoa.get_idade()}")
+        self.pessoa = None
+
+    def comprarTempo(self, value: int):
+        self.tempo += value
+
+    def dirigir(self, tempo: int):
+        if self.tempo == 0:
+            print("fail: buy time first")
+            return
+        if self.pessoa == None:
+            print("fail: empty motorcycle")
+            return
+        if self.pessoa.get_idade() > 10:
+            print("fail: too old to drive")
+            return
+        if tempo > self.tempo:
+            print(f"fail: time finished after {tempo - self.tempo} minutes")
+            self.tempo = 0
+        else:
+            self.tempo -= tempo
+
+    def buzinar(self):
+        print("P" + "e" * self.potencia + "m")
 
 
 def main():
     moto = Moto()
     while True:
         line = input()
-        print("$" + line)
-        args = line.split(" ")
+        print(f"${line}")
+        args = line.split()
 
         if args[0] == "end":
             break
+        elif args[0] == "init":
+            moto = Moto(int(args[1]))
         elif args[0] == "show":
             print(moto)
         elif args[0] == "enter":
             nome = args[1]
-            pessoa = Pessoa(nome)
-            moto.inserir(pessoa)
-        elif args[0] == "remover":
-            pessoa = moto.remover()
-            if pessoa == None:
-                print("Niguém na moto")
-            else:
-                print(f"{pessoa} saiu da moto")
-
-        else:
-            print("Comando inválido")
+            idade = int(args[2])
+            moto.inserir(Pessoa(nome, idade))
+        elif args[0] == "leave":
+            moto.remover()
+        elif args[0] == "buy":
+            moto.comprarTempo(int(args[1]))
+        elif args[0] == "drive":
+            moto.dirigir(int(args[1]))
+        elif args[0] == "honk":
+            moto.buzinar()
 
 
 main()

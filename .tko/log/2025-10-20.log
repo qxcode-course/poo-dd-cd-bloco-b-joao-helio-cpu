@@ -46,3 +46,18 @@
 2025-10-20 16:36:42, MOVE, v:1, k:poo@motoca, mode:BACK
 2025-10-20 16:36:52, MOVE, v:1, k:poo@motoca, mode:PICK
 2025-10-20 16:36:53, EXEC, v:1, k:poo@motoca, mode:FREE
+2025-10-20 16:54:53, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-20 16:54:58, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:4
+2025-10-20 16:55:56, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:13
+2025-10-20 16:56:12, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-20 16:57:11, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:28
+2025-10-20 16:57:13, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-20 16:57:18, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-20 16:58:25, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:44
+2025-10-20 16:58:39, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:60
+2025-10-20 16:59:36, EXEC, v:1, k:poo@motoca, mode:FULL, rate:93, size:92
+2025-10-20 17:00:00, EXEC, v:1, k:poo@motoca, mode:FULL, rate:93
+2025-10-20 17:00:05, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-20 17:00:14, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-20 17:00:19, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:93
+2025-10-20 17:00:22, MOVE, v:1, k:poo@motoca, mode:BACK
