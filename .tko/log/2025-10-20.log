@@ -61,3 +61,6 @@
 2025-10-20 17:00:14, MOVE, v:1, k:poo@motoca, mode:PICK
 2025-10-20 17:00:19, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:93
 2025-10-20 17:00:22, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-20 18:59:38, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-20 18:59:44, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:93
+2025-10-20 19:01:57, MOVE, v:1, k:poo@grafite, mode:DOWN

@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: C:\Users\João Hélio\Desktop\Clone POO Bloco B\poo-dd-cd-bloco-b-joao-helio-cpu\.tko\cache\poo.md
-  cache_timestamp: '2025-10-20 16:36:07'
+  cache_timestamp: '2025-10-25 10:31:07'
   filters: null
 expanded:
 - poo@campanha-principal
@@ -18,6 +18,9 @@ tasks:
   poo@camisa: '{rate:80, guide:aulas_do_professor, alone:9, study:60}'
   poo@roupa: '{rate:100, human:Meu_amigo, alone:7}'
   poo@relogio: '{rate:100, human:meu_amigo, alone:8}'
+  poo@motoca: '{human:sim, guide:aula, alone:7, study:60}'
+  poo@grafite: '{rate:100, iagen:sim_precisei_muito_estava_com_muito_erro_e_nao_consegui_resolver_so,
+    alone:6, study:90}'
 flags:
   quests: 0
   tracks: 0
@@ -25,4 +28,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@motoca
+selected: poo@motouber

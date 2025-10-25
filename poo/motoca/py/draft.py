@@ -28,7 +28,7 @@ class Moto:
         return (reserva)
 
     def inserir(self, pessoa: Pessoa):
-        if self.pessoa is not None:
+        if self.pessoa != None:
             print("fail: busy motorcycle")
             return
         self.pessoa = pessoa
