@@ -1,0 +1,9 @@
+2025-10-28 00:01:54, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:111
+2025-10-28 00:02:08, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75
+2025-10-28 00:02:24, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75
+2025-10-28 00:02:34, EXEC, v:1, k:poo@motouber, mode:FULL, rate:87, size:110
+2025-10-28 00:10:32, MOVE, v:1, k:poo@motouber, mode:PICK
+2025-10-28 00:10:35, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100, size:110
+2025-10-28 00:10:39, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100
+2025-10-28 00:10:39, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-28 00:11:30, SELF, v:1, k:poo@motouber, rate:100, iagen:sim_errei_demais_e_nao_tava_conseguindo_corrigir, alone:6, study:90
